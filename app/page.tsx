@@ -2,7 +2,9 @@
 
 import { navItems } from "@/data";
 
-import Hero from "@/components/Hero";
+import dynamic from "next/dynamic";
+const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
+
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
